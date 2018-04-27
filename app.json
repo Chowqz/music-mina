@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#192c3b",
+    "navigationBarTitleText": "享听music",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#192c3b"
+  }
+}

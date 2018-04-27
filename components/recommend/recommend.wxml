@@ -1,0 +1,36 @@
+<!--recommend.wxml-->
+<scroll-view class="recommend-wrapper" scroll-y="true" hidden="{{showIndex!=0}}">
+    <view class="banner">
+        <view class="banner-height">
+            <swiper indicator-dots="true" autoplay="true" indicator-color="rgba(144,144,144,.8)" indicator-active-color="#fff" interval="3000" duration="300">
+                <swiper-item wx:for="{{slider}}" wx:key="unquire">
+                    <image src="{{item.picUrl}}" class="slide-image" mode="widthFix"></image>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+    <view class="recommend-list">
+        <text class="list-title">热门歌单</text>
+        <view class="list-wrapper">
+            <view class="list-item" hover-class="songSheet-hover" wx:for="{{recommendList}}" wx:key="unquire" data-id="{{item.id}}">
+                <view class="img-box">
+                    <image src="{{item.picUrl}}" class="rec-img" mode="widthFix"></image>
+                    <view class="listen-count">
+                        <text class="iconfont icon-listen"></text>{{item.accessnum}}万</view>
+                    <view class="iconfont icon-play"></view>
+                </view>
+                <text class="rec-name">{{item.songListDesc}}</text>
+                <text class="rec-author">{{item.songListAuthor}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="about-us">
+        <navigator url="/pages/about/about">
+            <image class="logo" src="../../common/images/logo-text.png" mode="widthFix"></image>
+        </navigator>
+        <view class="click-tips">
+            <image src="../../common/images/click.gif" mode="widthFix"></image>
+            <text>戳一下又不会怀孕</text>
+        </view>
+    </view>
+</scroll-view>

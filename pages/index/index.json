@@ -1,0 +1,7 @@
+{
+	"usingComponents": {
+	    "recommend": "../../components/recommend/recommend",
+	    "toplist": "../../components/toplist/toplist",
+	    "songlist": "../../components/songlist/songlist"
+	}
+}

@@ -1,0 +1,19 @@
+<!--template.wxml-->
+<view class="songlist-wrapper" style="background-image: url({{songList.bgImage}});">
+	<view class="songlist-top">
+		<view class="iconfont icon-back" bindtap="back"></view>
+		<view class="list-name">{{songList.listname}}</view>
+	</view>
+ 	<scroll-view class="songlistlist-scroll" scroll-y="true" hidden="{{!showFlag}}" >
+ 		<view class="bg-box"></view>
+	 	<view class="song-list">
+	 		<view class="song" hover-class="navigator-hover" wx:for="{{songList.songs}}" wx:key="unquire" bindtap="playThis" data-tag="songItem" data-index="{{index}}">
+	 			<view class="song-index">{{index+1}}</view>
+	 			<view class="song-text">
+	 				<text class="song-name">{{item.songname}}</text>
+	 				<text class="singer">{{item.singername}}  ·  {{item.album}}</text>
+	 			</view>
+	 		</view>
+	 	</view>
+ 	</scroll-view>
+</view>

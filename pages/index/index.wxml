@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="tabBar">
+    <view class="tab-item {{showIndex==0?'tab-active':''}}" data-index="0" bindtap="tab">推荐</view>
+    <view class="tab-item {{showIndex==1?'tab-active':''}}" data-index="1" bindtap="tab">排行榜</view>
+    <view class="tab-item {{showIndex==2?'tab-active':''}}" data-index="2" bindtap="tab">我的歌曲</view>
+    <view class="tab-item {{showIndex==3?'tab-active':''}}" data-index="3" bindtap="tab">搜索</view>
+</view>
+<view class="content">
+    <recommend showIndex='{{showIndex}}'></recommend>
+    <toplist showIndex='{{showIndex}}'></toplist>
+</view>
+<view class="detail none-padding">
+	<songlist showFlag="{{songlistFlag}}"></songlist>
+</view>
