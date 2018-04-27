@@ -11,7 +11,6 @@ Page({
 
     },
     tab: function(e) {
-        
         this.setData({
             showIndex: e.target.dataset.index
         })
